@@ -1,4 +1,5 @@
 const http = require('http');
+const cors = require('cors');
 const accountRouter = require('./routes/account');
 const indexRouter = require('./routes');
 const stockRouter = require('./routes/stocks');
@@ -9,7 +10,6 @@ require('dotenv').config({
   path: '../.env',
 });
 const port = process.env.PORT;
-const cors = require('cors');
 const path = require('path');
 
 app.use(cors());
